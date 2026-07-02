@@ -20,9 +20,9 @@
     text-anchor="middle"
     dominant-baseline="middle"
     font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
-    font-size="22"
+    font-size="30"
     font-weight="700"
-    letter-spacing="-0.5"
+    letter-spacing="-1"
     fill="#f4fbfc"
-  >PKV</text>
+  >PV</text>
 </svg>
