@@ -47,7 +47,7 @@ const Index = () => {
             </div>
 
             <div className="space-y-2 sm:space-y-4">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.25] py-1">
                <span className="text-gradient">Praveenkumar Venkatesan</span>
               </h1>
               <p className="text-muted-foreground text-base sm:text-lg lg:text-xl 2xl:text-2xl font-serif italic">
