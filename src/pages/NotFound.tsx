@@ -1,5 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Compass, Home } from "lucide-react";
+import { Layout } from "@/components/Layout";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,15 +11,32 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+    <Layout>
+      <div className="page-container flex items-center">
+        <div className="content-container">
+          <div className="glass-panel mx-auto max-w-xl p-10 sm:p-14 text-center animate-fade-in">
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 border border-primary/20">
+              <Compass className="h-8 w-8 text-primary" />
+            </div>
+
+            <h1 className="text-gradient glow-text text-7xl sm:text-8xl font-bold tracking-tight mb-4">
+              404
+            </h1>
+
+            <p className="text-xl font-serif text-foreground mb-2">Lost in the phase space</p>
+            <p className="text-muted-foreground mb-8">
+              The page at <span className="text-primary/80 font-mono text-sm break-all">{location.pathname}</span>{" "}
+              doesn't exist, or has wandered off the trajectory.
+            </p>
+
+            <Link to="/" className="btn-primary">
+              <Home className="h-4 w-4" />
+              Return Home
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
